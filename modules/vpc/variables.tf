@@ -5,7 +5,8 @@ variable "vpc_cidr" {
 
 variable "availability_zones" {
   description = "Availability zones"
-  type        = string
+  type        = list(string)
+  default     = ["us-east-1a", "us-east-1b", "us-east-1"]
 }
 
 variable "private_subnet_cidrs" {
